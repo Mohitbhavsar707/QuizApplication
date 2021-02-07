@@ -1,0 +1,281 @@
+*{
+ max-width: 100%; 
+ overflow-x: hidden;
+ margin-left: 0;
+ margin-top: 0;
+ /* margin-right: 0; */
+ 
+}
+
+
+
+:root{
+  --primary-color: #45b3e0;
+  --secondary-color: #1a1a1a;
+  --tertiary-color:#a6a6a6;
+  --hover-color: #55505C;
+  --quaternary-color: #0000b3;
+  --shawdow-color: #18aadb;
+  --text-color: white;
+  --font-style: 'Lobster Two';
+
+}
+
+body{
+  font-family: var(--font-style), 'Lobster Two', cursive;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+.main{
+  background-color: #2b2b2b;
+}
+h2{
+  font-size: 3.5rem;
+  text-align: center;
+  color: white;
+}
+
+.header, p{
+  font-size: 1.1em;
+  text-align: center;
+  color: white;
+}
+
+.level{
+  margin-top: 30px;
+}
+
+.header{
+  padding: 40px 15px 15px 0px;
+  /* margin-right: 5px; */
+  background-color: #0e80a7;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+}
+
+.settings {
+  z-index: 1;
+}
+
+.final {
+  visibility: hidden;
+  z-index: 2;
+}
+
+.final p {
+  font-size: 30px;
+  text-align: center;
+}
+
+.final h4 {
+  font-size: 33px;
+  text-align: center;
+}
+
+.quiz  {
+  visibility: hidden;
+  z-index: 0;
+}
+
+#questions {
+  font-size: 20px;
+  font-family: var(--font-style), 'Lobster Two', cursive;
+  font-weight: 600;
+  line-height: 1.3;
+  color: white;
+  background-color: var(--hover-color);
+  appearance: none;
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
+  margin-left: 30px;
+  outline: none;
+  text-align: center;
+  width: 120px;
+}
+
+.settings select {
+  font-size: 20px;
+  font-family: var(--font-style), 'Lobster Two', cursive;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: 1px;
+  color: white;
+  background-color: var(--hover-color);
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  padding: 5px 10px 5px 10px ;
+  border-radius: 5px;
+  margin-left: 20px;
+  outline: none;
+  text-align: center;
+}
+
+.settings select::-ms-expand {
+  display: none;
+}
+
+.settings select:hover {
+  border-color: var(--primary-color);
+}
+
+.settings select:focus {
+  border-color: var(--hover-color);
+}
+
+.settings select option {
+  /* font-weight: bolder; */
+  font-family: var(--font-style), 'Lobster Two', 'cursive';
+}
+
+.settings label {
+  font-size: 25px;
+  margin-right: 16px;
+}
+
+.quiz, .settings, .final {
+  position: absolute;
+  margin-top: 40px;
+  padding: 20px 350px 50px 350px;
+  max-width: 100%;
+  background-color: #2b2b2b !important;
+  color: white;
+  margin-bottom: 200em;
+  
+}
+
+h3 {
+  display: block;
+  width: 550px;
+  font-size: 35px;
+  font-weight: 350;
+  word-wrap: break-word;
+  padding-top: 50px;
+}
+
+.submit {
+  width: 100%;
+  color: white;
+  background-color: var(--hover-color);
+  font-family: var(--font-style), 'Lobster Two', cursive;
+  outline: none;
+  border: none;
+  height: 50px;
+  font-size: 1.8rem;
+  margin-top: 20px;
+  border-radius: 5px;
+  letter-spacing: 2px;
+}
+
+.submit:hover {
+  background-color:#18aadb;
+  cursor: pointer;
+  color:white;
+}
+
+.count {
+  display: inline;
+  left: 110%;
+  position: relative;
+  padding: 35px;
+  margin-bottom: 100px;
+  cursor: pointer;
+}
+
+.count p {
+  position: absolute;
+  font-size: 35px;
+  
+}
+
+.total {
+  margin-left: 70px;
+}
+
+/* The container */
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 25px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: -2px;
+  left: 0px;
+  height: 25px;
+  width: 25px;
+  background-color: white;
+  /* border-radius: 30%; */
+  margin-top: 7px;
+}
+
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color:var(--shawdow-color);
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #18aadb;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+
+/* body.dark-theme {
+  color: #eee;
+  background: #121212;
+}
+
+body.dark-theme .header {
+background-color: black;
+}
+
+
+body.dark-theme .header h2{
+  color:white;
+
+  In progress**
+} */
+
+/* .settings.dark-theme{
+
+  background-color:white;
+} */
